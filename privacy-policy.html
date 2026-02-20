@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteSnap — Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #000000;
+      --white: #FFFFFF;
+      --yellow: #D9E021;
+      --yellow-hover: #EBF225;
+      --surface: #2C3030;
+      --muted: #757E7E;
+      --text: #F3F4F6;
+      --text-dim: #AAAAAA;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Geist Mono", monospace;
+      background: #1a1c1c;
+      color: var(--text);
+      letter-spacing: -0.03em;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 50px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-sq {
+      width: 14px;
+      height: 14px;
+      background: var(--yellow);
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .doc-label {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-weight: 400;
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 80px 40px 120px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      margin-bottom: 64px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    p {
+      font-size: 13px;
+      color: #C8CCCC;
+      margin-bottom: 14px;
+      font-weight: 400;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* ── DATA TABLE ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .data-table th {
+      text-align: left;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding: 0 16px 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 14px 16px 14px 0;
+      color: #C8CCCC;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.6;
+    }
+
+    .data-table td:first-child {
+      color: var(--white);
+      font-weight: 500;
+      white-space: nowrap;
+      width: 28%;
+    }
+
+    .data-table td .sub {
+      display: block;
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 3px;
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: rgba(217, 224, 33, 0.06);
+      border-left: 3px solid var(--yellow);
+      padding: 16px 20px;
+      font-size: 12px;
+      color: #C8CCCC;
+      margin: 24px 0;
+      line-height: 1.7;
+    }
+
+    .callout strong {
+      color: var(--yellow);
+      font-weight: 600;
+    }
+
+    /* ── CONTACT ── */
+    .contact-block {
+      background: var(--surface);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .contact-block p {
+      margin: 0;
+      font-size: 13px;
+      color: #C8CCCC;
+    }
+
+    .contact-block a {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      padding: 10px 20px;
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+
+    .contact-block a:hover { background: var(--yellow-hover); }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    footer .brand { opacity: 0.5; }
+    footer p { font-size: 11px; color: var(--text-dim); margin: 0; }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <div class="logo-sq"></div>
+      <span class="brand-name">SiteSnap</span>
+    </a>
+    <span class="doc-label">Privacy Policy</span>
+  </header>
+
+  <main class="page">
+
+    <div class="hero">
+      <div class="hero-tag">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective date: February 19, 2026 &nbsp;·&nbsp; SiteSnap Full Website Screenshots</p>
+    </div>
+
+    <!-- 1. OVERVIEW -->
+    <section>
+      <h2>Overview</h2>
+      <p>SiteSnap ("the Extension") is a Chrome extension that captures full-page screenshots of websites you visit. This policy explains exactly what data we collect, why we collect it, where it is stored, and your rights over it.</p>
+      <p>We do not sell your data, run ads, or share your information with third parties for marketing purposes.</p>
+    </section>
+
+    <!-- 2. WHAT WE COLLECT -->
+    <section>
+      <h2>What We Collect</h2>
+
+      <div class="callout">
+        <strong>No account required.</strong> If you use SiteSnap without creating an account, no data ever leaves your device. Screenshots and metadata are stored only in your browser's local IndexedDB.
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Why</th>
+            <th>Where stored</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Email address
+              <span class="sub">Signed-in users only</span>
+            </td>
+            <td>Account creation and authentication via Supabase Auth</td>
+            <td>Supabase (cloud)</td>
+          </tr>
+          <tr>
+            <td>
+              Auth tokens
+              <span class="sub">Access + refresh tokens</span>
+            </td>
+            <td>Keep you logged in between browser sessions</td>
+            <td>chrome.storage.local (on-device only)</td>
+          </tr>
+          <tr>
+            <td>
+              Screenshot images
+              <span class="sub">JPEG files you capture</span>
+            </td>
+            <td>Store and display your captures in the gallery</td>
+            <td>Local IndexedDB always; Supabase Storage if signed in</td>
+          </tr>
+          <tr>
+            <td>
+              Screenshot metadata
+              <span class="sub">Signed-in users only</span>
+            </td>
+            <td>Power gallery display and search</td>
+            <td>Supabase database (cloud)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 20px;">Screenshot metadata includes: the domain name (hostname only — e.g. <code style="background:#2C3030;padding:2px 6px;font-family:inherit;font-size:11px;">example.com</code>, never the full URL or query parameters), image dimensions, file size, upload type, and timestamp.</p>
+    </section>
+
+    <!-- 3. WHAT WE DON'T COLLECT -->
+    <section>
+      <h2>What We Do Not Collect</h2>
+      <p>We do not collect: full page URLs or query strings, browsing history, cookies or session data from the pages you visit, any content from form fields or text on pages you capture, keystrokes or mouse activity, device identifiers, IP addresses, or analytics or crash data of any kind.</p>
+    </section>
+
+    <!-- 4. HOW WE USE IT -->
+    <section>
+      <h2>How We Use Your Data</h2>
+      <p>Screenshot images and metadata are used solely to display your captures in the SiteSnap gallery and enable you to download them. Auth tokens are used only to authenticate requests to Supabase on your behalf. Your email address is used only for account login and, if you request it, password recovery. We do not use any collected data for profiling, advertising, or analytics.</p>
+    </section>
+
+    <!-- 5. DATA STORAGE & SECURITY -->
+    <section>
+      <h2>Data Storage &amp; Security</h2>
+      <p>Cloud storage is provided by <a href="https://supabase.com/privacy" style="color: var(--yellow); text-decoration: none;">Supabase</a> (hosted on AWS). Data is encrypted in transit via TLS and at rest by Supabase's storage infrastructure. Your screenshot files are stored in a private storage bucket — they are not publicly accessible. Access requires a short-lived signed URL generated on demand.</p>
+      <p>Auth tokens stored in <code style="background:#2C3030;padding:2px 6px;font-family:inherit;font-size:11px;">chrome.storage.local</code> are scoped to the extension and are not accessible to web pages or other extensions.</p>
+    </section>
+
+    <!-- 6. DATA RETENTION -->
+    <section>
+      <h2>Data Retention &amp; Deletion</h2>
+      <p>Your screenshots and metadata remain stored until you delete them. You can delete individual captures or batches at any time from within the extension. Deleting an item removes both the image file from cloud storage and its metadata record from the database.</p>
+      <p>To delete your account and all associated data entirely, contact us at the address below. We will permanently delete all stored images, metadata, and account information within 30 days of your request.</p>
+    </section>
+
+    <!-- 7. THIRD PARTIES -->
+    <section>
+      <h2>Third Parties</h2>
+      <p>The only third-party service used is Supabase, which provides authentication and cloud storage. Supabase acts as a data processor on our behalf and is contractually prohibited from using your data for any purpose other than providing the service. You can review Supabase's privacy policy at <a href="https://supabase.com/privacy" style="color: var(--yellow); text-decoration: none;">supabase.com/privacy</a>.</p>
+      <p>We do not use Google Analytics, Mixpanel, Sentry, or any other analytics or monitoring service.</p>
+    </section>
+
+    <!-- 8. YOUR RIGHTS -->
+    <section>
+      <h2>Your Rights</h2>
+      <p>You may request access to the data we hold about you, correction of inaccurate data, deletion of your account and all associated data, or a portable export of your screenshot metadata. To exercise any of these rights, contact us using the details below.</p>
+    </section>
+
+    <!-- 9. CHANGES -->
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>If we make material changes to this policy, we will update the effective date above and, where required by law, notify you via the email address associated with your account. Continued use of the Extension after a policy update constitutes acceptance of the revised policy.</p>
+    </section>
+
+    <!-- 10. CONTACT -->
+    <section>
+      <h2>Contact</h2>
+      <div class="contact-block">
+        <p>Questions, deletion requests, or data access requests — reach out directly.</p>
+        <a href="mailto:privacy@sitesnap.app">privacy@sitesnap.app</a>
+      </div>
+    </section>
+
+    <footer>
+      <a class="brand" href="#">
+        <div class="logo-sq"></div>
+        <span class="brand-name">SiteSnap</span>
+      </a>
+      <p>© 2026 SiteSnap. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
